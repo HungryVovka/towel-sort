@@ -1,6 +1,4 @@
-
-// You should implement your task here.
-
 module.exports = function towelSort (matrix) {
-  return [];
+    var towelsort = [].concat.apply([], matrix);
+    return towelsort;
 }
