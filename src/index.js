@@ -1,4 +1,4 @@
 module.exports = function towelSort (matrix) {
-    var towelsort = [].concat.apply([], matrix);
-    return towelsort;
+    return matrix.reduce((a, b) => {
+        return a.concat(Array.isArray(b) ? towelSort(b) : b);}, []);
 }
